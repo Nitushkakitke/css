@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function validate()
+        {
+            var uname= document.myform.Username.value;
+            // document.write(uname+"<br>");
+            var Password= document.myform.pwd.value;
+            // document.write(Password);
+            // if(uname==="nitushka" && Password==="123"){
+            //     document.write("valid");
+            // }
+            // else{
+            //     document.write("invalid");
+            // }
+            if(uname==="" && Password==="")
+           {
+            document.write("please enter credentials");
+           }
+            else if(Password.length<8){
+                document.write("please enter password length more than 8");
+            }
+            else if(uname=="nitushka" && Password=="123")
+            {
+                document.write("success");
+            }
+            else{
+                document.write("invalid password or uname");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="myform" method="post" onsubmit="validate()" >
+        Username: <input type="text" name="Username"/><br><br>
+        Password: <input type="password" name="pwd"><br><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
